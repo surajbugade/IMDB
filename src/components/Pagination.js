@@ -1,15 +1,8 @@
 import React, {useState} from 'react';
 
 
-function Pagination() {
-  const [page, setpage] = useState(1);
-  function goAhead(){
-    setpage(page+1)
-  }
-  function goBack(){
-    if(page>1)
-      setpage(page-1)
-  }
+function Pagination({pageProp, goAhead, goBack}) {
+  
   return <>
   <div className='w-full
     flex justify-center
@@ -29,7 +22,9 @@ function Pagination() {
         border-indigo-500
         text-indigo-500
         bg-gray-300
-      ">{page}</button>
+      ">
+        {pageProp}
+        </button>
       <button className="p-2
         border-2
         border-indigo-500

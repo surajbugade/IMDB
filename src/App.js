@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import Banner from "./components/Banner";
 import Movies from "./components/Movies";
 import NavBar from "./components/NavBar";
@@ -15,7 +16,7 @@ function App() {
           <Route path="/" element={<>
             <Banner/>
             <Movies/>
-            <Pagination/>
+            {/* <Pagination/> */}
           </>}/>
           <Route path="/favourites" element={<Favourites/>} />
         </Routes>
