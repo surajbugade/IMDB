@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Pagination from "./components/Pagination";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Favourites from "./components/Favourites";
+import Favourites1 from "./components/Favourites1";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Movies/>
             {/* <Pagination/> */}
           </>}/>
-          <Route path="/favourites" element={<Favourites/>} />
+          <Route path="/favourites" element={<Favourites1/>} />
         </Routes>
       </Router>
     </div>

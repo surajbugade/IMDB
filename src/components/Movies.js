@@ -33,7 +33,13 @@ function Movies() {
     let newArray = [...favourites, movie];
     setFavourites([...newArray]);
     //   console.log(newArray)
+    localStorage.setItem("imdb", JSON.stringify(newArray))
   };
+  let del = (movie) => {
+    let newArray = favourites.filter((m) => m.id != movie.id)
+    setFavourites([...newArray])
+    localStorage.setItem("imdb", JSON.stringify(newArray))
+}
 
   return (
     <>
@@ -78,7 +84,7 @@ function Movies() {
                   </div> :
                   <div
                     className="absolute top-2 right-2 p-2 bg-gray-800 rounded-xl cursor-pointer hover:scale-110 hover:bg-sky-700"
-                    onClick={() => add(movie)}
+                    onClick={() => del(movie)}
                   >
                     ❌
                   </div>             
